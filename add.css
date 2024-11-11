@@ -1,0 +1,231 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #006400;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.hamburger-container {
+    margin-right: 20px;
+}
+
+.hamburger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.closebtn {
+    background: none;
+    font-size: 30px;
+    color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.sidebar-links a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar-links a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Content Styling */
+#content {
+    margin-left: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+select:hover {
+    border-color: #4CAF50;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Employment Details Section */
+h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Hide Employment details initially */
+#employment-details {
+    display: none;
+}
+
+#employment-details label {
+    margin-bottom: 10px;
+}
+
+/* Use grid to align employment fields in two columns */
+#employment-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Make each label span one column in the grid */
+#employment-details label {
+    grid-column: span 1;
+}
+
+/* Make the form inputs take full width in the grid */
+#employment-details input,
+#employment-details select {
+    width: 100%;
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .hamburger-container {
+        margin-right: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    form label,
+    form input,
+    form select {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Stack the grid fields vertically for smaller screens */
+    #employment-details {
+        grid-template-columns: 1fr; /* Stack fields */
+    }
+}

@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header with Logo on the Left and Hamburger on the Right */
+header {
+    background-color: #006400;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.hamburger-container {
+    margin-right: 20px;
+}
+
+.hamburger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0; /* Move sidebar to the right */
+    background-color: white; /* White background for the sidebar */
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a soft edge */
+}
+
+/* Sidebar when open */
+.sidebar.open {
+    width: 250px;
+}
+
+/* Sidebar header */
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #4CAF50; /* Green color for header */
+    position: relative; /* For positioning the close button */
+}
+
+/* Close button */
+.closebtn {
+    background: none;
+    font-size: 30px;
+    color: #4CAF50; /* Green color for the close button */
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Absolute position within the header */
+    top: 20px; /* Space from the top */
+    left: 20px; /* Space from the left */
+}
+
+/* Sidebar links */
+.sidebar-links {
+    padding: 0; /* Remove padding */
+    margin-top: 30px; /* Adjust margin from the top */
+}
+
+.sidebar-links a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333; /* Dark text color for links */
+    display: block;
+    font-size: 18px;
+    text-align: center; /* Center-align the text */
+    transition: 0.3s;
+}
+
+/* Sidebar link hover effect */
+.sidebar-links a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text when hovering */
+}
+
+/* Ensure the links are aligned vertically */
+.sidebar-links a:first-child {
+    border-top: 1px solid #ddd; /* Optional border above the first link */
+}
+
+/* Page content */
+#content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.container {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Filteration and Button Alignment */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Vertically center align the elements */
+    margin-bottom: 15px;  /* Reduced margin for compact design */
+    width: 100%;
+}
+
+.filter-row {
+    display: flex;
+    gap: 15px;  /* Even spacing between elements */
+    align-items: center;  /* Vertically align the elements */
+}
+
+/* Styling for Select, Input, and Button */
+.filter-row select,
+.filter-row input,
+.filter-row button {
+    padding: 8px 15px;  /* Slightly smaller padding for compact look */
+    border-radius: 4px;  /* Rounded corners for consistency */
+    border: 1px solid #ddd;
+    font-size: 14px;  /* Smaller font for clean appearance */
+    transition: border-color 0.3s ease;  /* Smooth transition for border color */
+}
+
+/* Hover effect for select, input, and button */
+.filter-row select:hover,
+.filter-row input:hover,
+.filter-row button:hover {
+    border-color: #4CAF50;  /* Highlight border on hover */
+}
+
+/* Filter button specific styling */
+.filter-row button {
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    font-size: 14px;  /* Consistent font size */
+    padding: 8px 18px;  /* Smaller, consistent padding */
+    border: none;  /* No border */
+    border-radius: 4px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Smooth transition for background */
+}
+
+/* Button hover effect */
+.filter-row button:hover {
+    background-color: #45a049;  /* Slightly darker green on hover */
+}
+
+/* "All Alumni" button */
+.all-alumni-btn {
+    background-color: #007BFF;  /* Blue background */
+    color: white;
+    padding: 8px 18px;  /* Consistent padding with other buttons */
+    font-size: 14px;  /* Same font size */
+    border: none;
+    border-radius: 4px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Smooth background transition */
+}
+
+/* Hover effect for "All Alumni" button */
+.all-alumni-btn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* General button styling */
+.button {
+    background-color: #4CAF50;  /* Green background */
+    color: white;  /* White text */
+    padding: 8px 18px;  /* Padding for a compact look */
+    text-align: center;  /* Center text */
+    text-decoration: none;  /* Remove underline from links */
+    display: inline-block;  /* Keep buttons inline */
+    font-size: 14px;  /* Smaller font size */
+    border: none;  /* No borders */
+    border-radius: 4px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth background transition */
+}
+
+.button:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+
+/* Filter and All Alumni buttons styling */
+.filter-container .button,
+.filter-row .button {
+    margin-right: 10px; /* Spacing between buttons */
+    margin-bottom: 0px; /* Optional: space at the bottom */
+    margin-top: 12px;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: black;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #45a049;
+}
