@@ -10,7 +10,8 @@ $employmentFilter = $_POST['employment'] ?? '';
 $query = "SELECT 
             a.alumni_id, 
             a.last_name, 
-            a.first_name, 
+            a.first_name,
+            e.employment, 
             e.past_occupation, 
             e.present_occupation, 
             e.name_of_employer, 
@@ -115,6 +116,7 @@ $totalPages = ceil($totalAlumni / $resultsPerPage);
                     <th>Alumni ID</th>
                     <th>Last Name</th>
                     <th>First Name</th>
+                    <th>Employment</th>
                     <th>Past Occupation</th>
                     <th>Present Occupation</th>
                     <th>Name of Employer</th>
@@ -133,6 +135,7 @@ $totalPages = ceil($totalAlumni / $resultsPerPage);
                         <td><?= $row['alumni_id'] ?></td>
                         <td><?= $row['last_name'] ?></td>
                         <td><?= $row['first_name'] ?></td>
+                        <td><?= $row['employment'] ?></td>
                         <td><?= $row['past_occupation'] ?></td>
                         <td><?= $row['present_occupation'] ?></td>
                         <td><?= $row['name_of_employer'] ?></td>
